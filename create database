@@ -1,0 +1,92 @@
+6412121cbb2dc2cb9e460cfee7046be2
+create table user(
+     `id` int primary key auto_increment ,
+     `username` varchar(20) UNIQUE key,
+       `password` varchar(200),
+       `create_time` varchar(40),
+       `create_ip` varchar(40),
+       `login_time` VARCHAR(40),
+       `login_ip` varchar(40),
+       `status` INT,
+       `power` int
+       )
+
+
+
+
+
+
+       create table admin(
+        `id` int primary key auto_increment,
+        `username` varchar(20) UNIQUE key,
+          `password` varchar(200),
+          `login_time` VARCHAR(40),
+          `login_ip` varchar(40),
+          `power` int
+          )
+        create table car(
+                `id` int primary key auto_increment,
+                `username` varchar(20),
+                `goodsname` varchar(100) UNIQUE key,
+                `gcount` int,
+                `imange` varchar(200),
+                `gooodsmoney` int,
+                `goodsid`int,
+                `allmoney` int
+        )charset=utf8
+
+
+
+ create table catelist(
+                  `id` int primary key auto_increment,
+                  `catelistname` varchar(50) UNIQUE key,
+                   `catelistdate` varchar(100)
+                  )charset=utf8
+create table goodslist(
+`id` int primary key auto_increment,
+`cate_id` int,
+`goodsname` varchar(100),
+`gooodsmoney` float,
+`gcount`   int,
+`ginfo`  text,
+`datetime` varchar(40),
+`gway` int,
+`imange`varchar(255),
+`glicks` int,
+`gvotecoun` int
+)  charset=utf8
+create table user_info(
+`id` int primary key auto_increment,
+`user_id` int,
+`address` varchar(100),
+`phone` int
+)
+create table post(
+`id` int primary key auto_increment,
+`user_id` int,
+`address` varchar(100),
+`phone` int,
+`create_time` varchar(40),
+`post_number` int,
+`status` int,
+`goods_id` int,
+`goodsname` varchar(100),
+`gcount` int,
+`goodsmoney` float,
+`all_money` float
+)
+
+
+
+
+
+   16      Gway    int      商品状态
+   4	Ginfo	text	商品介绍
+   5	Gminimg	Varchar(100)	小图片
+   6	Gmaximg	Varchar(255)	大图片
+   7	Categoryid	int	分类id
+   8	Gdate	datetime	上架时间(默认)
+   10	Gsellway	Varchar(50)	销售方式的名称
+   11	Gsellprice	money	销售方式的价格
+   11	Glicks	int	商品点击数
+   14	Gvotecount	int	商品总评分数
